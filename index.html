@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="data:image/ico;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAOoWAADqFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzN/4A4Cx9Cx5rfM2psj2B5zC9QAAAAAA6vH4ACJ37wB8rvQncKfzVI259BZ3q/MA///+AAAAAAAAAAAAAAAAAHCn8k9KkPHhRY3x8GCd8ougxPUShbT0AJK78wCbwfQVU5Xxv0GK8P9ZmfKbw9r2BqDF9AAAAAAAAAAAAAAAAABhnvKKPIfw/zmF8P8/ifD9WpnyqYq39B9DjPEAaaLyYkCK8Ps5hfD/RIzx7nSq8z1koPMA///3AAAAAAAAAAAAe63zOk6S8dQ7hvD/OYbw/z6I8P9jn/KIt9L1EE6S8cE6hvD/Oobw/zuH8P9amfKY///+ArnT9gAAAAAAAAAAAABN7QCBsfMzU5XxxD2I8P9LkfHcfq/zNG+m8lZBivD4Oobw/zqG8P85hvD/SI7x43+w8yt3q/MAAAAAAAAAAAD0+PkAVpfxAIq39CJinvKWb6fzS4Sz9CVOkvHNOobw/zqG8P86hvD/Oobw/z2I8P9gnfJ8ACjqANDh9gAAAAAAv9b0Cb3V9ADd6vgA///8BHuu9D5Pk/HGO4fw/zqG8P86hvD/Oobw/zqG8P85hvD/TZLx0JK89BmMuPQAAAAAAMHX9AeVvfQAn8T2DmWg83JHjvHnOobw/zqG8P86hvD/Oobw/zqG8P86hvD/Oobw/0CJ8PtoovNfOobwAO3z9wCJtvQAk7z0F1mZ8qhAifD6OYbw/zqG8P86hvD/Oobw/zqG8P86hvD/Oobw/zqG8P86hvD/UpXxuLDO9QydwvQAbKXzAHer80BEjPH0OIXw/zqG8P86hvD/Oobw/zqG8P86hvD/Oobw/zqG8P86hvD/OYbw/0OM8fNzqfNIWpryAIy49QCVvfURX53ymUqQ8eVBivD6PIfw/zqG8P85hvD/Oobw/zqG8P86hvD/Oobw/zqG8P87hvD/V5fypN/r9wf///sAocf4AMTc+geMufUmcKjzUWKf84hTlvK9SY/x5EGL8fo8h/D/Oobw/zmF8P86hvD/OYbw/0aN8ed8r/QzAAAAAAAAAAAAAAAAAAAAAP3++wD///4Avdf4Coy59SZyqfNTYZ7ziFSW8r5KkPHmQYvx+zyH8P9Ij/Hnea30NgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/v7+AP///wC+1vcLjrr1KHWq9FlloPKGcqjzVrnU9gUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAA8fAAAGDwAAAg8AAAAHAACABwAAwAcAAGADAABAAwAAgAEAAIABAACAAAAAwAAAAPwAAAD/wAAA//8AAA==">  
+
+  <title>Construe Logistica</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+  <script
+          src="https://code.jquery.com/jquery-3.2.1.js"
+          integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+          crossorigin="anonymous">
+          </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFvo3U8WwTICfPNpds2CJu6ED_x6Sr2EA"
+  type="text/javascript"></script>
+  
+  <script src="gmaps.js"></script>
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+           <a class="navbar-brand" href="#">CONSTRUE LOGÍSTICA - MAPEAMENTO LOJAS</a>
+            <img src="img/constru.png" class="logo-vedacit pull-right">
+     </nav>
+<!--
+     <div class="container-fluid map-container">
+        <div id="map"></div>
+     </div>
+
+      <div class="container">
+          <div id="myProgress">
+              <div id="myBar"></div>
+            </div>
+      </div>
+    -->
+     <div class="listagem"><ul id="lista"></ul></div> 
+
+     <div class="row">
+       <div class="col-sm-6">
+          <a class="btn btn-lg btn-success" id="btn-cli-vedacit" role="button">cadastro total</a> 
+       </div>
+       <div class="col-sm-6">
+          <a class="btn btn-lg btn-success" id="btn-cli-novos" role="button">mapeia lojas distantes 250Km de Juiz de Fora</a> 
+       </div>
+     </div>  
+
+ 
+
+
+
+
+
+
+  <script type="text/javascript" src="sheet-conn.js"></script>
+</body>
+</html>
